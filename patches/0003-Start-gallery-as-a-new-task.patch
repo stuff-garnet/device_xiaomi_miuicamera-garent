@@ -1,0 +1,28 @@
+From 5df42d1774aa182946749886e49897407a8e27ac Mon Sep 17 00:00:00 2001
+From: Arian <arian.kulmer@web.de>
+Date: Thu, 30 Jan 2025 20:54:19 -0300
+Subject: [PATCH 3/7] Start gallery as a new task
+
+---
+ smali/com/android/camera/r3.smali | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/smali/com/android/camera/r3.smali b/smali/com/android/camera/r3.smali
+index 5a9518d42..1beaadaea 100644
+--- a/smali/com/android/camera/r3.smali
++++ b/smali/com/android/camera/r3.smali
+@@ -1068,6 +1068,11 @@
+ 
+     invoke-virtual {p0, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+ 
++    # FLAG_ACTIVITY_NEW_TASK
++    const v0, 0x10000000
++
++    invoke-virtual {p0, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
++
+     invoke-virtual {p1, p0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+ 
+     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->Xf()V
+-- 
+2.48.1
+

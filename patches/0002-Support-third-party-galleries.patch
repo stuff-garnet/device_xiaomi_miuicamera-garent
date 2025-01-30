@@ -1,19 +1,18 @@
-From 5107d55c2ee599fe01c5e5be6ddc5508a73bb90d Mon Sep 17 00:00:00 2001
+From 7776156bb105dcfb026af2d51572d290f03df0f0 Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
-Date: Fri, 8 Mar 2024 02:11:53 +0100
-Subject: [PATCH 2/5] support third party galleries
+Date: Thu, 30 Jan 2025 13:01:01 -0300
+Subject: [PATCH 2/7] support third party galleries
 
-Signed-off-by: Ramadhani <ramadhanifals@gmail.com>
 ---
- smali/com/android/camera/p3.smali                    |  3 ---
+ smali/com/android/camera/r3.smali                    |  3 ---
  .../provider/ParallelProcessProvider.smali           | 12 ------------
  2 files changed, 15 deletions(-)
 
-diff --git a/smali/com/android/camera/p3.smali b/smali/com/android/camera/p3.smali
-index 4427df4a..6b0511a2 100644
---- a/smali/com/android/camera/p3.smali
-+++ b/smali/com/android/camera/p3.smali
-@@ -1175,9 +1175,6 @@
+diff --git a/smali/com/android/camera/r3.smali b/smali/com/android/camera/r3.smali
+index d20d88d5e..5a9518d42 100644
+--- a/smali/com/android/camera/r3.smali
++++ b/smali/com/android/camera/r3.smali
+@@ -1173,9 +1173,6 @@
      invoke-direct {p0, v0, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
  
      :goto_0
@@ -24,7 +23,7 @@ index 4427df4a..6b0511a2 100644
      const-string p1, "from_MiuiCamera"
  
 diff --git a/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali b/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
-index 9c0d3d7d..711c5c1a 100644
+index 9758b05bb..8f1000c2a 100644
 --- a/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
 +++ b/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
 @@ -452,18 +452,6 @@
@@ -47,5 +46,5 @@ index 9c0d3d7d..711c5c1a 100644
      :goto_0
      return v1
 -- 
-2.34.1
+2.48.1
 
