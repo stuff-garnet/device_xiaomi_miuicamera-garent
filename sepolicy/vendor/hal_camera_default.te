@@ -11,3 +11,5 @@ allow hal_camera_default proc_pressure:file r_file_perms;
 allow hal_camera_default proc:file r_file_perms;
 allow platform_app vendor_camera_sensor_prop:file { read };
 allow platform_app adsprpcd_file:dir { search getattr };
+allow hal_camera_default sysfs:file read;
+allow hal_camera_default system_data_file:dir search;
